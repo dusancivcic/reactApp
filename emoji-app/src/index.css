@@ -1,0 +1,215 @@
+/* ------------------------------------- */
+/* ------------------------------------- */
+/* ------------1REM = 10px-------------- */
+/* ------------------------------------- */
+/* ------------------------------------- */
+/* RESET */
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+/* font-family: 'Exo', sans-serif; */
+/* font-family: 'Open Sans', sans-serif; */
+::-moz-selection {
+    background: var(--blue-color);
+    color: var(--blue-color);;
+}
+::selection {
+    background: var(--blue-color);;
+    color: var(--blue-color);;
+}
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+* {
+    -webkit-tap-highlight-color: var(--blue-color);
+}
+*:focus {
+    outline: 0;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+/* width */
+::-webkit-scrollbar {
+    width: .5vw;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--primary-color);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--blue-color);
+    border-radius: 100px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--blue-color);
+}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    scrollbar-color: var(--primary-color) #fff;
+    scrollbar-width: normal;
+}
+@media only screen and (max-width: 56.25em) {
+    html {
+        font-size: 57%;
+    }
+}
+@media only screen and (max-width: 75em) {
+    html {
+        font-size: 60%;
+    }
+}
+body {
+    overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
+    background: var(--primary-color);
+}
+body.no-scroll,
+html.no-scroll {
+    overflow: hidden;
+}
+img {
+    max-width: 100%;
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: inherit;
+}
+button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-family: inherit;
+}
+button[disabled] {
+    cursor: not-allowed;
+}
+ul,
+ol {
+    list-style: none;
+}
+
+
+input,
+textarea {
+    font-family: inherit;
+    resize: none;
+}
+/* HIDE ARROWS ON NUMBER INPUTS */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+/* RESET */
+/* UTILITIES */
+:root {
+    --primary-color: #252525;
+    /* --secondary-color: #91130b; */
+    --blue-color: #3997ce;
+    --primary-txt: #DEDEDE;
+    --secondary-txt: #8D8D8D;
+    --dark-txt: #151615;
+    --dark-txt-lt: #3F403F;
+}
+.container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    max-width: 152rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1{
+  color: white;
+}
+#root{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+.emoji-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: var(--blue-color);
+    padding: 2rem;
+    border-radius: 0rem 0rem 1rem 1rem;
+    box-shadow: 0rem 0rem 4rem rgba(57, 151, 206, 0.3);
+    height: 31.5rem;
+    overflow-y: scroll;
+}
+.emoji-container button{
+    background-color: transparent;
+}
+.emoji-container div{
+    font-size: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search{
+    height: 7rem;
+    padding: 1rem;
+    border-radius: 1rem 1rem 0rem 0rem;
+    border: 0.2rem solid var(--blue-color);
+    box-shadow: 0rem 0rem 4rem rgba(57, 151, 206, 0.3);
+}
+.search input{
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem 1rem 0rem 0rem;
+    background-color: transparent;
+    color: var(--blue-color);
+    font-size: 1.8rem;
+    border: 0.2rem solid var(--blue-color);
+}
+.search input::placeholder{
+    color: var(--blue-color);
+}
+.copied-symbol{
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    background-color: var(--blue-color);
+    padding: 2rem;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.copied-symbol p{
+    color: #fff;
+    font-size: 1.8rem;
+}
+.copied-symbol.active{
+    opacity: 1;
+}
