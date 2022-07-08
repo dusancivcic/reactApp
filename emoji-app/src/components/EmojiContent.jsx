@@ -43,11 +43,11 @@ const EmojiContent = () => {
                 </div>
                 <div className='emoji-container'>
                     { 
-                            data?.map((el, id) =>(
+                            data?.filter((el) => el.keywords.includes(query)).map((el, id) =>(
                                 <button key={id} onClick={e => copyText(el.symbol)}>
                                 <div>{el.symbol}</div>
                                 </button>
-                            ))
+                            )).slice(0,16)
                             }
                 </div>
                 <CopiedSymbol copiedSymbol={copiedSymbol} active={active}/>

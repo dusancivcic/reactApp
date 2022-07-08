@@ -161,21 +161,24 @@ h1{
 .emoji-container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     background-color: var(--blue-color);
     padding: 2rem;
     border-radius: 0rem 0rem 1rem 1rem;
     box-shadow: 0rem 0rem 4rem rgba(57, 151, 206, 0.3);
     height: 31.5rem;
-    overflow-y: scroll;
+    width: 31.5rem;
 }
 .emoji-container button{
     background-color: transparent;
+    height: fit-content;
 }
 .emoji-container div{
     font-size: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    max-height: 7rem;
 }
 .search{
     height: 7rem;
